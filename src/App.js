@@ -1,8 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const App = (props) => {
   const [state, setState] = useState(props);
   const { name, price } = state;
+
+  useEffect(() => {
+    console.log("DidMount or DidUpdate");
+  });
+  useEffect(() => {
+    console.log("DidMount");
+  }, []);
+  useEffect(() => {
+    console.log("This callback is for name only");
+  }, [name]);
+
+  const renderPeriod = () => {
+    console.log("renderPeriod renders pertiod");
+    return "。";
+  };
 
   return (
     <div>
