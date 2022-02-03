@@ -1,16 +1,16 @@
-action = {
-  type: "CREATE_EVENT",
-  title: "最初の投稿",
-  body: "最初のイベントを投稿します",
-};
+// action = {
+//   type: "CREATE_EVENT",
+//   title: "最初の投稿",
+//   body: "最初のイベントを投稿します",
+// };
 
-state = [];
+// state = [];
 
-state = [
-  { id: 1, title: "タイトル1", body: "ボディー1" },
-  { id: 2, title: "タイトル2", body: "ボディー2" },
-  { id: 3, title: "タイトル3", body: "ボディー3" },
-];
+// state = [
+//   { id: 1, title: "タイトル1", body: "ボディー1" },
+//   { id: 2, title: "タイトル2", body: "ボディー2" },
+//   { id: 3, title: "タイトル3", body: "ボディー3" },
+// ];
 
 const events = (state = [], action) => {
   switch (action.type) {
