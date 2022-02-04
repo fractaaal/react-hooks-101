@@ -5,16 +5,14 @@ import EventForm from "./EventForm";
 import Events from "./Events.js";
 import AppContext from "../contexts/AppContext.js";
 
-console.log({ AppContext });
-
 const App = () => {
   const [state, dispatch] = useReducer(reducer, []);
 
   return (
-    <AppContext.Provider value={"Hello"}>
+    <AppContext.Provider value={{ state, dispatch }}>
       <div className="container-fluid">
-        <EventForm state={state} dispatch={dispatch} />
-        <Events state={state} dispatch={dispatch} />
+        <EventForm />
+        <Events />
       </div>
     </AppContext.Provider>
   );
